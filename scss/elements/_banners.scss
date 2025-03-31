@@ -1,0 +1,83 @@
+@import '../abstract/_all';
+
+.marketing-spot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  padding: 16px;
+  border: 1px solid $c-primary;
+
+  svg-icon,
+  svg-icon2,
+  md-icon {
+    margin-right: 8px;
+    z-index: -1;
+  }
+}
+
+@mixin banner() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  padding: 24px 16px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.banner-warning {
+  @include banner;
+
+  background-color: $c-warning;
+  color: $c-white;
+}
+
+.banner-info {
+  @include banner;
+
+  background-color: $c-info;
+  color: $c-white;
+}
+
+.banner-valid {
+  @include banner;
+
+  background-color: $c-valid;
+  color: $c-white;
+}
+
+.banner-alert {
+  @include banner;
+
+  background-color: $c-alert;
+  color: $c-primary;
+}
+
+.banner-feel {
+  @include banner;
+
+  background-color: $c-feel;
+  color: $c-primary;
+}
+
+.banner-limited {
+  @include banner;
+
+  background-color: $bg-black;
+  color: $c-white;
+}
+
+.banner-app {
+  position: fixed;
+  z-index: 10005;
+  left: auto;
+  right: auto;
+  bottom: 0;
+  width: 100%;
+  @media (min-width: 768px) {
+    max-width: 375px;
+    bottom: 0;
+    left: 96px;
+  }
+}

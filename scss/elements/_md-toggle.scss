@@ -1,0 +1,76 @@
+@import '../abstract/_all';
+
+.md-toggle {
+  display: grid;
+  list-style: none;
+}
+
+.md-toggle .md-toggle-button, 
+.md-toggle .btn-link {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  height: 40px;
+  justify-content: space-between;
+}
+
+.md-toggle-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.md-toggle-inner {
+  overflow: hidden;
+}
+
+.md-toggle-lines {
+  border-top: 1px solid black;
+  .md-toggle-inner,
+  &.md-toggle-item {
+    .btn-link {
+      border-bottom: 1px solid black;
+    }
+  }
+}
+
+.is-active {
+  &.md-toggle-item .md-toggle-panel {  
+    grid-template-rows: 1fr;
+  }
+}
+
+.has-light {
+  .md-toggle .md-toggle-button {
+    background-color: transparent;
+    color: $c-white;
+  }
+  .md-toggle .md-toggle-lines {
+    border-top: 1px solid white;
+    .md-toggle-inner,
+    &.md-toggle-item.md-toggle-lines {
+      .btn-link {
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+}
+
+.has-icon-pre, 
+.has-icon-post {
+  .md-toggle-header .md-toggle-button {
+    .md-toggle-icon-container {
+      align-items: center;
+      display: flex;
+      gap: 8px;
+    }
+  }
+
+  .has-light {
+    .md-toggle-icon-container svg path,
+    .md-toggle-icon-container svg circle {
+      stroke: white;
+    }
+  }
+}
+
