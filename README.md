@@ -45,34 +45,34 @@ Instala el paquete directamente con npm o Yarn:
 
 A continuación se detallan los scripts disponibles en el archivo `package.json` y su propósito:
 
-- **watch**: `npx @11ty/eleventy --watch`
+- **watch**: 
   - Este script ejecuta Eleventy en modo de vigilancia, lo que significa que observará los cambios en los archivos y recompilará automáticamente el sitio cuando se detecten cambios.
 
-- **serve**: `npx @11ty/eleventy --serve`
+- **serve**: 
   - Este script inicia un servidor de desarrollo utilizando Eleventy, permitiendo ver el sitio en un navegador web local.
 
-- **deploy**: `git add . && (git commit -m "$(node -p \"require('./package.json').version\")" || echo 'No hay cambios para commit') && git push origin main && npm publish`
+- **deploy**: 
   - Este script agrega todos los cambios al repositorio git, realiza un commit con la versión actual del proyecto, empuja los cambios a la rama principal y publica el paquete en npm. Si no hay cambios para hacer commit, muestra un mensaje indicándolo.
 
-- **start:watch**: `npm-run-all --parallel watch serve open:guide`
+- **start:watch**: 
   - Este script ejecuta en paralelo los scripts `watch`, `serve` y `open:guide` utilizando `npm-run-all`. Es útil para iniciar el entorno de desarrollo completo con un solo comando.
 
-- **generate**: `node generate-scss-variables.js`
+- **generate**: 
   - Este script ejecuta un archivo JavaScript que genera variables SCSS. Es útil para automatizar la creación de variables SCSS basadas en alguna lógica definida en el archivo `generate-scss-variables.js`.
 
-- **css**: `sass scss/style.scss dist/style.css && sass scss/style-rtl.scss dist/style-rtl.css && sass scss/docs.scss dist/docs.css`
+- **css**: 
   - Este script compila los archivos SCSS a CSS utilizando Sass. Genera tres archivos CSS: `style.css`, `style-rtl.css` y `docs.css` a partir de sus respectivos archivos SCSS.
 
-- **site**: `npx @11ty/eleventy`
+- **site**:
   - Este script ejecuta Eleventy para generar el sitio estático.
 
-- **build**: `npm run generate && npm run css && npm run site`
+- **build**:
   - Este script ejecuta una serie de comandos en secuencia: primero genera las variables SCSS, luego compila los archivos SCSS a CSS y finalmente genera el sitio estático con Eleventy.
 
-- **start**: `npm run build && npm run open:guide`
+- **start**: 
   - Este script ejecuta el script `build` y luego abre la guía del proyecto en el navegador.
 
-- **open:guide**: `open guia/index.html`
+- **open:guide**:
   - Este script abre el archivo `index.html` de la guía del proyecto en el navegador predeterminado del sistema.
 
 Estos scripts están diseñados para facilitar el desarrollo, compilación y despliegue del proyecto, proporcionando un flujo de trabajo eficiente y automatizado.
@@ -132,4 +132,3 @@ Testear rtl
 - Validar el HTML y el CSS (W3C Validator).
 - Revisar rendimiento con Lighthouse o PageSpeed.
 - Usar linters (ej. stylelint) para un código más limpio.
-https://validator.w3.org/
