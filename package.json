@@ -21,7 +21,7 @@
     "site": "npx @11ty/eleventy",
     "build": "npm run generate && npm run css && npm run site",
      "start": "npm run build && npm run open:guide",
-    "open:guide": "open guia/index.html"
+    "open:guide": "open designsystem/index.html"
   },
   "repository": {
     "type": "git",

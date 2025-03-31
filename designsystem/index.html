@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guía de variables de holygrail CSS">
+
+  <link rel="stylesheet" href="../dist/style.css">
+  <link rel="stylesheet" href="../dist/docs.css">
+  <title>Variables Cheatsheet</title>
+  <style>
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="grid-cols-12   text-l">
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #fff;"></div>
+      <div class="variable-info">
+        <div>$c-white</div>
+        <span class="code-snippet">#fff</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #000;"></div>
+      <div class="variable-info">
+        <div>$c-black</div>
+        <span class="code-snippet">#000</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #f0f0f0;"></div>
+      <div class="variable-info">
+        <div>$c-light-grey</div>
+        <span class="code-snippet">#f0f0f0</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #a9a9a9;"></div>
+      <div class="variable-info">
+        <div>$c-middle-grey</div>
+        <span class="code-snippet">#a9a9a9</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #666666;"></div>
+      <div class="variable-info">
+        <div>$c-dark-grey</div>
+        <span class="code-snippet">#666666</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: rgba(0, 0, 0, 0.3);"></div>
+      <div class="variable-info">
+        <div>$c-primary-3</div>
+        <span class="code-snippet">rgba(0, 0, 0, 0.3)</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: rgba(0, 0, 0, 0.15);"></div>
+      <div class="variable-info">
+        <div>$c-primary-15</div>
+        <span class="code-snippet">rgba(0, 0, 0, 0.15)</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: rgba(0, 0, 0, 0.3);"></div>
+      <div class="variable-info">
+        <div>$c-primary-30</div>
+        <span class="code-snippet">rgba(0, 0, 0, 0.3)</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: rgba(0, 0, 0, 0.6);"></div>
+      <div class="variable-info">
+        <div>$c-primary-60</div>
+        <span class="code-snippet">rgba(0, 0, 0, 0.6)</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: rgba(0, 0, 0, 0.97);"></div>
+      <div class="variable-info">
+        <div>$c-primary-97</div>
+        <span class="code-snippet">rgba(0, 0, 0, 0.97)</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: rgba(255, 255, 255, 0.3);"></div>
+      <div class="variable-info">
+        <div>$c-secondary-3</div>
+        <span class="code-snippet">rgba(255, 255, 255, 0.3)</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: rgba(255, 255, 255, 0.15);"></div>
+      <div class="variable-info">
+        <div>$c-secondary-15</div>
+        <span class="code-snippet">rgba(255, 255, 255, 0.15)</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: rgba(255, 255, 255, 0.3);"></div>
+      <div class="variable-info">
+        <div>$c-secondary-30</div>
+        <span class="code-snippet">rgba(255, 255, 255, 0.3)</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: rgba(255, 255, 255, 0.6);"></div>
+      <div class="variable-info">
+        <div>$c-secondary-60</div>
+        <span class="code-snippet">rgba(255, 255, 255, 0.6)</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: rgba(255, 255, 255, 0.97);"></div>
+      <div class="variable-info">
+        <div>$c-secondary-97</div>
+        <span class="code-snippet">rgba(255, 255, 255, 0.97)</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #000;"></div>
+      <div class="variable-info">
+        <div>$c-primary</div>
+        <span class="code-snippet">#000</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #000;"></div>
+      <div class="variable-info">
+        <div>$c-secondary</div>
+        <span class="code-snippet">#000</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #B40016;"></div>
+      <div class="variable-info">
+        <div>$c-accent</div>
+        <span class="code-snippet">#B40016</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #B40016;"></div>
+      <div class="variable-info">
+        <div>$c-error</div>
+        <span class="code-snippet">#B40016</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #ffce4e;"></div>
+      <div class="variable-info">
+        <div>$c-sale</div>
+        <span class="code-snippet">#ffce4e</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #1a32a4;"></div>
+      <div class="variable-info">
+        <div>$c-info</div>
+        <span class="code-snippet">#1a32a4</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #12882c;"></div>
+      <div class="variable-info">
+        <div>$c-valid</div>
+        <span class="code-snippet">#12882c</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #ffce4e;"></div>
+      <div class="variable-info">
+        <div>$c-warning</div>
+        <span class="code-snippet">#ffce4e</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #e5740b;"></div>
+      <div class="variable-info">
+        <div>$c-notice</div>
+        <span class="code-snippet">#e5740b</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #e5740b;"></div>
+      <div class="variable-info">
+        <div>$c-orange</div>
+        <span class="code-snippet">#e5740b</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #000;"></div>
+      <div class="variable-info">
+        <div>$c-limited</div>
+        <span class="code-snippet">#000</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #12882c;"></div>
+      <div class="variable-info">
+        <div>$c-success</div>
+        <span class="code-snippet">#12882c</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #ffce4e;"></div>
+      <div class="variable-info">
+        <div>$c-alert</div>
+        <span class="code-snippet">#ffce4e</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #186CF1;"></div>
+      <div class="variable-info">
+        <div>$c-facebook</div>
+        <span class="code-snippet">#186CF1</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #4285f4;"></div>
+      <div class="variable-info">
+        <div>$c-google</div>
+        <span class="code-snippet">#4285f4</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #03cf5d;"></div>
+      <div class="variable-info">
+        <div>$c-naver</div>
+        <span class="code-snippet">#03cf5d</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #2dc100;"></div>
+      <div class="variable-info">
+        <div>$c-wechat</div>
+        <span class="code-snippet">#2dc100</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #000000;"></div>
+      <div class="variable-info">
+        <div>$c-feel</div>
+        <span class="code-snippet">#000000</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #f0f0f0;"></div>
+      <div class="variable-info">
+        <div>$c-feel-light</div>
+        <span class="code-snippet">#f0f0f0</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #a9a9a9;"></div>
+      <div class="variable-info">
+        <div>$c-feel-dark</div>
+        <span class="code-snippet">#a9a9a9</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #e3e3e3;"></div>
+      <div class="variable-info">
+        <div>$c-tier-silver</div>
+        <span class="code-snippet">#e3e3e3</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #99b0c5;"></div>
+      <div class="variable-info">
+        <div>$c-tier-platinum</div>
+        <span class="code-snippet">#99b0c5</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #dcbe99;"></div>
+      <div class="variable-info">
+        <div>$c-tier-gold</div>
+        <span class="code-snippet">#dcbe99</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #f0f0f0;"></div>
+      <div class="variable-info">
+        <div>$bg-light</div>
+        <span class="code-snippet">#f0f0f0</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #000;"></div>
+      <div class="variable-info">
+        <div>$bg-dark</div>
+        <span class="code-snippet">#000</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #000;"></div>
+      <div class="variable-info">
+        <div>$bg-black</div>
+        <span class="code-snippet">#000</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #000;"></div>
+      <div class="variable-info">
+        <div>$c-bg-light</div>
+        <span class="code-snippet">#000</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #fff;"></div>
+      <div class="variable-info">
+        <div>$c-bg-dark</div>
+        <span class="code-snippet">#fff</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #f0f0f0;"></div>
+      <div class="variable-info">
+        <div>$white-smoke</div>
+        <span class="code-snippet">#f0f0f0</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #000000;"></div>
+      <div class="variable-info">
+        <div>$primary</div>
+        <span class="code-snippet">#000000</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #363636;"></div>
+      <div class="variable-info">
+        <div>$primary-guide</div>
+        <span class="code-snippet">#363636</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #6759bb;"></div>
+      <div class="variable-info">
+        <div>$secondary-guide</div>
+        <span class="code-snippet">#6759bb</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #6759bb;"></div>
+      <div class="variable-info">
+        <div>$ternary-guide</div>
+        <span class="code-snippet">#6759bb</span>
+      </div>
+    </li>
+    
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: #1a1a1a;"></div>
+      <div class="variable-info">
+        <div>$list-disc-color</div>
+        <span class="code-snippet">#1a1a1a</span>
+      </div>
+    </li>
+    </div>
+  <div class="  text-l">
+    <h3>$breakpointscols</h3>
+    
+      <div>xs: 1px</div>
+      
+      <div>sm: 768px</div>
+      
+      <div>md: 992px</div>
+      
+      <div>lg: 1280px</div>
+      
+      <div>xl: 1440px</div>
+      
+    <h3>$headers</h3>
+    
+      <div>titularbase-m: 14px,14px,16px,16px,1.2,'medium'</div>
+      
+    <h3>$minheaders</h3>
+    
+      <div>p-tag: 8px,10px,1.3,'regular'</div>
+      
+      <div>h2: 18px,24px,1.2,'bold'</div>
+      
+      <div>title-l: 12px,12px,1.4,'regular'</div>
+      
+      <div>title-l-l: 12px,12px,1.4,'light'</div>
+      
+      <div>title-l-b: 12px,12px,1.4,'medium'</div>
+      
+      <div>title-m: 11px,11px,1.4,'regular'</div>
+      
+      <div>title-s: 10px,10px,1.4,'regular'</div>
+      
+      <div>text-l: 12px,12px,1.5,'regular'</div>
+      
+      <div>text-l-l: 12px,12px,1.5,'light'</div>
+      
+      <div>text-m: 11px,11px,1.5,'regular'</div>
+      
+    <h3>$headersFixers</h3>
+    
+      <div>12: 12px,1.5</div>
+      
+      <div>14: 14px,1.5</div>
+      
+      <div>16: 16px,1.5</div>
+      
+      <div>18: 18px,1.5</div>
+      
+      <div>20: 20px,1.5</div>
+      
+      <div>24: 24px,1.5</div>
+      
+    <h3>$headersFluids</h3>
+    
+      <div>1: 60px,160px,0.8</div>
+      
+      <div>2: 40px,100px,0.9</div>
+      
+      <div>3: 20px,30px,0.9</div>
+      
+    <h3>$heights</h3>
+    
+      <div>height-xs: 80px,80px</div>
+      
+      <div>height-sm: 100px,100px</div>
+      
+      <div>height-128: 128px,128px</div>
+      
+      <div>height-md: 350px,350px</div>
+      
+      <div>height-lg: 400px,400px</div>
+      
+      <div>height-xl: 450px,450px</div>
+      
+      <div>height-full: 100vh,100vh</div>
+      
+      <div>height-big: 300px,500px</div>
+      
+      <div>height-medium: 200px,400px</div>
+      
+      <div>height-mini: 100px,300px</div>
+      
+      <div>height-home: calc(100vh - 80px),calc(100vh - 80px)</div>
+      
+    <h3>$margin-top</h3>
+    
+      <div>mtr-128: 64px,128px,128px,128px</div>
+      
+    <h3>$margin-bottom</h3>
+    
+      <div>mbr-24: 16px,24px,24px,24px</div>
+      
+      <div>mbr-32: 16px,32px,32px,32px</div>
+      
+      <div>mbr-64: 32px,64px,64px,64px</div>
+      
+      <div>mbr-128: 64px,128px,128px,128px</div>
+      
+      <div>mbr-20-40: 20px,40px,40px,40px</div>
+      
+      <div>mbr-16-32: 16px,16px,32px,32px</div>
+      
+      <div>mbr-8-24: 8px,8px,24px,24px</div>
+      
+    <h3>$padding</h3>
+    
+      <div>p-body: 20px,20px,40px,40px</div>
+      
+    <h3>$padding-top</h3>
+    
+      <div>ptr-120: 64px,64px,120px,120px</div>
+      
+      <div>ptr-128: 64px,64px,128px,128px</div>
+      
+      <div>ptr-160: 64px,64px,160px,160px</div>
+      
+      <div>ptr-136: 48px,48px,136px,136px</div>
+      
+      <div>ptr-20-120: 20px,20px,120px,120px</div>
+      
+      <div>ptr-112: 80px,80px,112px,112px</div>
+      
+      <div>ptr-80: 48px,48px,80px,80px</div>
+      
+      <div>ptr-64: 32px,32px,64px,64px</div>
+      
+      <div>ptr-24: 16px,16px,24px,24px</div>
+      
+    <h3>$padding-bottom</h3>
+    
+      <div>pbr-136: 64px,64px,136px,136px</div>
+      
+      <div>pbr-128: 64px,64px,128px,128px</div>
+      
+      <div>pbr-120: 64px,64px,120px,120px</div>
+      
+      <div>pbr-112: 80px,80px,112px,112px</div>
+      
+      <div>pbr-96: 64px,64px,96px,96px</div>
+      
+      <div>pbr-24: 16px,16px,24px,24px</div>
+      
+    <h3>$padding-left</h3>
+    
+      <div>pl-body: 20px,20px,40px,40px</div>
+      
+    <h3>$padding-right</h3>
+    
+      <div>pr-body: 20px,20px,40px,40px</div>
+      </div>
+
+    <div class="is-flex">
+      <p>$espaciados : </p>
+      <p>0, 2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 72, 80, 96, 112, 120, 128, 160</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$cols-grids : </p>
+      <p>2, 3, 4, 6, 8, 12</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$padding-global : </p>
+      <p>8px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$padding-mobile : </p>
+      <p>24px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$padding-desktop : </p>
+      <p>40px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$padding-button : </p>
+      <p>8px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$totalCols : </p>
+      <p>12</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$totalColsXl : </p>
+      <p>24</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$padding-y : </p>
+      <p></p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$padding-x : </p>
+      <p></p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$margin : </p>
+      <p></p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$margin-x : </p>
+      <p></p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$margin-y : </p>
+      <p></p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$margin-left : </p>
+      <p></p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$container : </p>
+      <p>800px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$container-2 : </p>
+      <p>700px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$container-3 : </p>
+      <p>900px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$container-4 : </p>
+      <p>360px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$container-5 : </p>
+      <p>800px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$container-6 : </p>
+      <p>442px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$container-7 : </p>
+      <p>595px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$container-8 : </p>
+      <p>395px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$container-9 : </p>
+      <p>798px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$container-10 : </p>
+      <p>200px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$container-11 : </p>
+      <p>1080px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$container-12 : </p>
+      <p>1080px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$container-full : </p>
+      <p>1500px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$xcontainer-10 : </p>
+      <p>200px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$xcontainer-4 : </p>
+      <p>360px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$xcontainer-8 : </p>
+      <p>395px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$xcontainer-6 : </p>
+      <p>442px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$xcontainer-7 : </p>
+      <p>595px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$xcontainer-2 : </p>
+      <p>700px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$xcontainer-9 : </p>
+      <p>798px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$xcontainer : </p>
+      <p>800px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$xcontainer-5 : </p>
+      <p>800px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$xcontainer-3 : </p>
+      <p>900px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$xcontainer-11 : </p>
+      <p>1080px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$xcontainer-12 : </p>
+      <p>1080px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$xcontainer-full : </p>
+      <p>1500px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$height-xs : </p>
+      <p>60px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$height-sm : </p>
+      <p>100px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$height-md : </p>
+      <p>350px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$height-lg : </p>
+      <p>400px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$height-xl : </p>
+      <p>450px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$height-full : </p>
+      <p>100vh</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$height-home : </p>
+      <p>calc(100vh - 80px)</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$transition : </p>
+      <p>278ms</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$min-width : </p>
+      <p>320px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$min-vw : </p>
+      <p>320px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$max-vw : </p>
+      <p>1500px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$svg-size : </p>
+      <p>16px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$tooltip-padding : </p>
+      <p>8px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$fs : </p>
+      <p>'font-size'</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$lh : </p>
+      <p>'line-height'</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$mg : </p>
+      <p>'margin'</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$mx : </p>
+      <p>'margin'</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$my : </p>
+      <p>'margin'</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$mt : </p>
+      <p>'margin-top'</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$mr : </p>
+      <p>'margin-right'</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$mb : </p>
+      <p>'margin-bottom'</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$p : </p>
+      <p>'padding'</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$py : </p>
+      <p>'padding'</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$px : </p>
+      <p>'padding'</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$pt : </p>
+      <p>'padding-top'</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$pl : </p>
+      <p>'padding-left'</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$pr : </p>
+      <p>'padding-right'</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$pb : </p>
+      <p>'padding-bottom'</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$ml : </p>
+      <p>'margin-left'</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$text-sm : </p>
+      <p>12px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$text-md : </p>
+      <p>14px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$text-lg : </p>
+      <p>16px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$btn-radius : </p>
+      <p>0</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$obj-radius : </p>
+      <p>0</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$form-radius : </p>
+      <p>0</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$btn-line-height : </p>
+      <p>1</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$btn-padding : </p>
+      <p>12px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$btn-text-mini : </p>
+      <p>12px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$btn-text-small : </p>
+      <p>12px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$btn-text-medium : </p>
+      <p>12px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$btn-text-large : </p>
+      <p>12px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$btn-text-xlarge : </p>
+      <p>12px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$btn-text-full : </p>
+      <p>12px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$btn-text-r : </p>
+      <p>12px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$btn-text-m : </p>
+      <p>12px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$tabs-text : </p>
+      <p>12px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$font-weight-secondary-light : </p>
+      <p>300</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$font-weight-secondary-medium : </p>
+      <p>400</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$font-weight-secondary-bold : </p>
+      <p>700</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$height-inputs : </p>
+      <p>40px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$height-btn : </p>
+      <p>40px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$text-input-m : </p>
+      <p>12px</p>
+    </div>
+    
+    <div class="is-flex">
+      <p>$text-input-d : </p>
+      <p>12px</p>
+    </div>
+    
+</div>
+
+</body>
+</html>

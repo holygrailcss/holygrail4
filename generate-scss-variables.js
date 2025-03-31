@@ -1,76 +1,96 @@
-// generate-scss-variables.js
 const fs = require('fs');
 const path = require('path');
 
-// Importar los tres archivos JSON
-const variables = require('./src/_data/variables.json');
+// Importar los archivos JSON necesarios
 const colors = require('./src/_data/colors.json');
 const maps = require('./src/_data/maps.json');
 
-/**
- * Formatea el valor para SCSS.
- * @param {*} value - El valor a formatear.
- * @returns {string} - El valor formateado para SCSS.
- */
-function formatValue(value) {
-  if (Array.isArray(value)) {
-    // Array => lista SCSS: ( val, val, val )
-    return `( ${value.join(', ')} )`;
-  } else if (typeof value === 'object' && value !== null) {
-    // Objeto => mapa SCSS: ( key: val, key: val )
-    let entries = [];
-    for (const [k, v] of Object.entries(value)) {
-      entries.push(`${k}: ${formatValue(v)}`);
-    }
-    return `( ${entries.join(', ')} )`;
+// Función para generar contenido HTML para colores
+function generarHtmlColores(colors) {
+  let htmlContent = '';
+  Object.entries(colors).forEach(([key, data]) => {
+    htmlContent += `
+    <li class="variable-item">
+      <div class="variable-box" style="background-color: ${data.value};"></div>
+      <div class="variable-info">
+        <div>${data.var_name}</div>
+        <span class="code-snippet">${data.value}</span>
+      </div>
+    </li>
+    `;
+  });
+  return htmlContent;
+}
+
+// Función para generar contenido HTML para mapas
+function generarHtmlMapas(maps) {
+  let mapHtmlContent = '';
+  Object.entries(maps).forEach(([key, data]) => {
+    mapHtmlContent += `
+    <h3>${data.var_name}</h3>
+    `;
+    Object.entries(data.value).forEach(([subKey, value]) => {
+      mapHtmlContent += `
+      <div>${subKey}: ${value}</div>
+      `;
+    });
+  });
+  return mapHtmlContent;
+}
+
+// Función para insertar contenido en el HTML
+function insertarContenidoEnHtml(siteHtml, insertionPoint, content) {
+  if (siteHtml.includes(insertionPoint)) {
+    return siteHtml.replace(insertionPoint, content);
   } else {
-    // Valor primitivo (string/number)
-    return value;
+    console.error(`Punto de inserción para ${insertionPoint} no encontrado.`);
+    return siteHtml;
   }
 }
 
-let scssContent = '';
+// Rutas de archivos
+const sitePath = path.join(__dirname, '_site', 'guia', 'index.html');
+const guiaPath = path.join(__dirname, 'designsystem', 'index.html');
 
-/**
- * Procesa cada categoría de variables y agrega al contenido SCSS.
- * @param {Object} categoryData - Las variables de una categoría.
- * @param {string} type - El tipo de variables ('value', 'map', 'list').
- */
-function processCategory(categoryData, type) {
-  for (const [key, data] of Object.entries(categoryData)) {
-    const varName = data.var_name;
-    const defaultSuffix = data.default ? ' !default' : '';
+// Leer contenido del archivo HTML
+let siteHtml = fs.readFileSync(sitePath, 'utf8');
 
-    let formatted;
+// Generar y insertar contenido de colores
+const htmlContent = generarHtmlColores(colors);
+siteHtml = insertarContenidoEnHtml(siteHtml, '<!-- Insertar variables de color aquí -->', htmlContent);
 
-    switch (type) {
-      case 'value':
-        // Variable simple
-        formatted = `${varName}: ${data.value}${defaultSuffix};`;
-        break;
-      case 'list':
-        // Lista SCSS
-        formatted = `${varName}: ${formatValue(data.value)}${defaultSuffix};`;
-        break;
-      case 'map':
-        // Mapa SCSS
-        formatted = `${varName}: ${formatValue(data.value)}${defaultSuffix};`;
-        break;
-      default:
-        console.warn(`Tipo desconocido: ${type} para la variable ${varName}`);
-        continue;
-    }
+// Generar y insertar contenido de mapas
+const mapHtmlContent = generarHtmlMapas(maps);
+siteHtml = insertarContenidoEnHtml(siteHtml, '<!-- Insertar variables de mapa aquí -->', mapHtmlContent);
 
-    scssContent += formatted + '\n';
-  }
+// Escribir el contenido actualizado en el archivo HTML
+fs.writeFileSync(guiaPath, siteHtml);
+console.log('Variables de color y mapa insertadas en /designsystem/index.html');
+
+
+
+// Función para generar contenido HTML para variables
+function generarHtmlVariables(variables) {
+  let variablesHtmlContent = '';
+  Object.entries(variables).forEach(([key, data]) => {
+    variablesHtmlContent += `
+    <div class="is-flex">
+      <p>${data.var_name} : </p>
+      <p>${Array.isArray(data.value) ? data.value.join(', ') : data.value}</p>
+    </div>
+    `;
+  });
+  return variablesHtmlContent;
 }
 
-// Procesar cada categoría con su tipo correspondiente
-processCategory(colors, 'value');
-processCategory(variables, 'list');
-processCategory(maps, 'map');
+// Leer contenido del archivo variables.json
+const variablesPath = path.join(__dirname, 'src', '_data', 'variables.json');
+const variablesJson = JSON.parse(fs.readFileSync(variablesPath, 'utf8'));
 
-// Escribir el contenido SCSS en un archivo
-const variablesPath = path.join(__dirname, 'scss', 'abstract', '_setup.scss');
-fs.writeFileSync(variablesPath, scssContent);
-console.log('SCSS variables generadas en src/scss/abstract/_setup.scss');
+// Generar y insertar contenido de variables
+const variablesHtmlContent = generarHtmlVariables(variablesJson);
+siteHtml = insertarContenidoEnHtml(siteHtml, '<!-- Insertar variables aquí -->', variablesHtmlContent);
+
+// Escribir el contenido actualizado en el archivo HTML
+fs.writeFileSync(guiaPath, siteHtml);
+console.log('Variables  insertadas en /designsystem/index.html');
