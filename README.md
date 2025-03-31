@@ -1,5 +1,4 @@
 
-
 <p align="center">
   <a href="https://holyguide.es">
     <img width="200" src="https://res.cloudinary.com/manuel-ruiz/image/upload/v1576145416/holygrail/logoholy.svg" alt="Holygrail logo">
@@ -8,113 +7,72 @@
 
 <h1 align="center">Holygrail4</h1>
 
+## ✨ Características
 
+- 🌈 **Diseño de UI agnóstico**: Ideal para empezar con un lienzo limpio y definir tu propio estilo.
+- 📦 **Componentes de alta calidad**: Conjunto de estilos y utilidades listos para usar, basados en SCSS.
+- 🛡 **Tipado predecible**: Variables y mixins en SCSS con consistencia y predictibilidad.
+- ⚙️ **Herramientas de desarrollo**: Scripts para compilar, vigilar y desplegar fácilmente.
+- 🌍 **Soporte multi-idioma**: Preparado para proyectos que requieren internacionalización.
+- 🎨 **Personalización avanzada**: Sobrescribe variables y mixins sin complicarte.
 
-✨ Características
-🌈 Diseño de UI agnóstico: Ideal para empezar con un lienzo limpio y definir tu propio estilo.
+## 🖥 Compatibilidad con Navegadores
 
-📦 Componentes de alta calidad: Conjunto de estilos y utilidades listos para usar, basados en SCSS.
+- Navegadores modernos
+- Renderizado del lado del servidor
+- Electron
 
-🛡 Tipado predecible: Variables y mixins en SCSS con consistencia y predictibilidad.
+![Edge](https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png) Edge  
+![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) Firefox  
+![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) Chrome  
+![Safari](https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png) Safari  
+![Electron](https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png) Electron  
 
-⚙️ Herramientas de desarrollo: Scripts para compilar, vigilar y desplegar fácilmente.
+**Edge**: Últimas 2 versiones  
+**Firefox**: Últimas 2 versiones  
+**Chrome**: Últimas 2 versiones  
+**Safari**: Últimas 2 versiones  
+**Electron**: Últimas 2 versiones  
 
-🌍 Soporte multi-idioma: Preparado para proyectos que requieren internacionalización.
+## 📦 Instalación
 
-🎨 Personalización avanzada: Sobrescribe variables y mixins sin complicarte.
+### Desde npm
 
-🖥 Compatibilidad con Navegadores
-Navegadores modernos
-
-Renderizado del lado del servidor
-
-Electron
-
-<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" /><br>Edge	<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /><br>Firefox	<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /><br>Chrome	<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /><br>Safari	<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png" alt="Electron" width="24px" height="24px" /><br>Electron
-Edge	Últimas 2 versiones	Últimas 2 versiones	Últimas 2 versiones	Últimas 2 versiones
-📦 Instalación
-Desde npm
 Instala el paquete directamente con npm o Yarn:
 
-bash
-Copiar
-Editar
-npm install holygrail4
-bash
-Copiar
-Editar
-yarn add holygrail4
-Importar en tu proyecto
-En tu archivo SCSS principal:
 
-scss
-Copiar
-Editar
-@import 'holygrail4/scss/style.scss';
-O incluye el CSS compilado en tu HTML:
+### Scripts en package.json
 
-html
-Copiar
-Editar
-<link rel="stylesheet" href="node_modules/holygrail4/dist/style.css">
-Uso Rápido (CDN)
-Para usar Holygrail4 sin configurar nada localmente, añade este <link> en tu <head>:
+A continuación se detallan los scripts disponibles en el archivo `package.json` y su propósito:
 
-html
-Copiar
-Editar
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holygrail4@latest/dist/style.css">
-¡Listo! Ahora puedes usar los estilos base de Holygrail4 en tu proyecto sin necesidad de instalaciones adicionales.
+- **watch**: `npx @11ty/eleventy --watch`
+  - Este script ejecuta Eleventy en modo de vigilancia, lo que significa que observará los cambios en los archivos y recompilará automáticamente el sitio cuando se detecten cambios.
 
-Scripts Disponibles
-En el archivo package.json se han definido varios scripts para facilitar tu flujo de trabajo:
+- **serve**: `npx @11ty/eleventy --serve`
+  - Este script inicia un servidor de desarrollo utilizando Eleventy, permitiendo ver el sitio en un navegador web local.
 
-watch: Inicia Eleventy en modo watch para regenerar el sitio al detectar cambios.
+- **deploy**: `git add . && (git commit -m "$(node -p \"require('./package.json').version\")" || echo 'No hay cambios para commit') && git push origin main && npm publish`
+  - Este script agrega todos los cambios al repositorio git, realiza un commit con la versión actual del proyecto, empuja los cambios a la rama principal y publica el paquete en npm. Si no hay cambios para hacer commit, muestra un mensaje indicándolo.
 
-serve: Levanta un servidor local para previsualizar el sitio.
+- **start:watch**: `npm-run-all --parallel watch serve open:guide`
+  - Este script ejecuta en paralelo los scripts `watch`, `serve` y `open:guide` utilizando `npm-run-all`. Es útil para iniciar el entorno de desarrollo completo con un solo comando.
 
-deploy: Crea un commit con la versión actual (basada en el package.json) y realiza push a la rama main, luego hace npm publish.
+- **generate**: `node generate-scss-variables.js`
+  - Este script ejecuta un archivo JavaScript que genera variables SCSS. Es útil para automatizar la creación de variables SCSS basadas en alguna lógica definida en el archivo `generate-scss-variables.js`.
 
-start:watch: Ejecuta en paralelo watch, serve y open:guide.
+- **css**: `sass scss/style.scss dist/style.css && sass scss/style-rtl.scss dist/style-rtl.css && sass scss/docs.scss dist/docs.css`
+  - Este script compila los archivos SCSS a CSS utilizando Sass. Genera tres archivos CSS: `style.css`, `style-rtl.css` y `docs.css` a partir de sus respectivos archivos SCSS.
 
-generate: Ejecuta el script generate-scss-variables.js para generar variables en Sass.
+- **site**: `npx @11ty/eleventy`
+  - Este script ejecuta Eleventy para generar el sitio estático.
 
-css: Compila los archivos Sass (style.scss, style-rtl.scss, docs.scss) a la carpeta dist.
+- **build**: `npm run generate && npm run css && npm run site`
+  - Este script ejecuta una serie de comandos en secuencia: primero genera las variables SCSS, luego compila los archivos SCSS a CSS y finalmente genera el sitio estático con Eleventy.
 
-site: Genera el sitio estático con Eleventy.
+- **start**: `npm run build && npm run open:guide`
+  - Este script ejecuta el script `build` y luego abre la guía del proyecto en el navegador.
 
-build: Ejecuta en secuencia generate, css y site, construyendo el proyecto completo.
+- **open:guide**: `open guia/index.html`
+  - Este script abre el archivo `index.html` de la guía del proyecto en el navegador predeterminado del sistema.
 
-start: Ejecuta build y luego open:guide.
-
-open:guide: Abre la documentación localizada en guia/index.html en el navegador.
-
-Ejemplo de flujo de desarrollo
-bash
-Copiar
-Editar
-# Instala dependencias
-npm install
-
-# Genera el proyecto y abre la guía
-npm run start
-
-# o bien, para desarrollo continuo:
-npm run start:watch
-Estructura del Proyecto
-dist/: Contiene los archivos CSS compilados y los assets listos para distribución.
-
-scss/: Carpeta principal con los archivos fuente en SCSS y variables.
-
-guia/: Documentación y guía de uso.
-
-generate-scss-variables.js: Script para generar variables personalizadas en SCSS.
-
-package.json: Incluye la información del paquete, dependencias y scripts.
-
-🌍 Internacionalización
-Holygrail4 soporta múltiples idiomas. Puedes configurar tu proyecto para adaptarse a diferentes idiomas sin mayores complicaciones.
-
-🤝 Contribuciones
-¡Siéntete libre de abrir un issue o enviar un pull request!
-Se agradece cualquier forma de contribución para mejorar este proyecto.
+Estos scripts están diseñados para facilitar el desarrollo, compilación y despliegue del proyecto, proporcionando un flujo de trabajo eficiente y automatizado.
