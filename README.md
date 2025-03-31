@@ -76,3 +76,60 @@ A continuación se detallan los scripts disponibles en el archivo `package.json`
   - Este script abre el archivo `index.html` de la guía del proyecto en el navegador predeterminado del sistema.
 
 Estos scripts están diseñados para facilitar el desarrollo, compilación y despliegue del proyecto, proporcionando un flujo de trabajo eficiente y automatizado.
+
+##Proceso de test de un componente holygrail
+
+lo meteremos en la guia
+Testear todas las resoluciones
+Testear navegadores
+Testear accesibilidad
+Testear rtl
+
+## Checklist de pruebas para una maqueta HTML/CSS
+
+### Resoluciones (Responsive)
+
+- **Móvil, Tablet y Escritorio**
+  - Revisa que no aparezca scroll horizontal o elementos fuera de lugar.
+  - Ajusta los breakpoints para cada tamaño de pantalla.
+
+### Navegadores principales
+
+- **Chrome, Firefox, Safari y Edge**
+  - (Opcional) Internet Explorer si es necesario.
+  - Usa resets o normaliza el CSS para evitar diferencias de estilos.
+
+### Accesibilidad
+
+- **Estructura semántica**: Utiliza etiquetas HTML5 como `header`, `main`, `footer`, `nav`, `section`, `article`, etc., para definir la estructura del contenido.
+- **Texto alternativo en imágenes**: Asegúrate de que todas las imágenes tengan un atributo `alt` descriptivo.
+- **Roles ARIA**: Utiliza roles ARIA apropiados para mejorar la accesibilidad de los elementos interactivos.
+- **Contraste de colores**: Asegúrate de que el contraste de colores cumpla con los estándares WCAG (AA mínimo).
+- **Navegación por teclado**: Verifica que todos los elementos interactivos sean accesibles y operables mediante el teclado.
+- **Etiquetas de formulario**: Asegúrate de que todos los campos de formulario tengan etiquetas (`label`) asociadas.
+- **Enlaces descriptivos**: Utiliza textos de enlace que describan claramente el destino del enlace.
+- **Orden de tabulación**: Asegúrate de que el orden de tabulación sea lógico y siga la secuencia de lectura.
+- **Evitar contenido parpadeante**: No utilices contenido que parpadee o destelle, ya que puede causar problemas a personas con epilepsia fotosensible.
+- **Tiempo suficiente para leer**: Proporciona suficiente tiempo para que los usuarios puedan leer y utilizar el contenido.
+- **Compatibilidad con lectores de pantalla**: Verifica que el contenido sea compatible con lectores de pantalla.
+- **Evitar el uso exclusivo de color**: No confíes únicamente en el color para transmitir información.
+- **Texto escalable**: Asegúrate de que el texto sea escalable sin pérdida de contenido o funcionalidad.
+- **Contenido multimedia accesible**: Proporciona subtítulos y descripciones de audio para contenido multimedia.
+- **Evitar el uso de tablas para diseño**: Utiliza tablas solo para datos tabulares, no para diseño de página.
+- **Proporcionar alternativas para contenido no textual**: Asegúrate de que todo el contenido no textual tenga una alternativa textual.
+- **Evitar el uso de CAPTCHA**: Si es necesario, proporciona una alternativa accesible.
+- **Proporcionar retroalimentación clara**: Asegúrate de que los usuarios reciban retroalimentación clara y comprensible sobre sus acciones.
+- **Evitar el uso de scripts que interfieran con la accesibilidad**: Asegúrate de que los scripts no interfieran con la accesibilidad del contenido.
+
+### Diseño RTL (Right To Left)
+
+- **Propiedad** `direction: rtl;`
+- Revisa que la alineación y flotados funcionen en modo RTL.
+- Comprueba fuentes y caracteres para idiomas como árabe o hebreo.
+
+### Extras útiles
+
+- Validar el HTML y el CSS (W3C Validator).
+- Revisar rendimiento con Lighthouse o PageSpeed.
+- Usar linters (ej. stylelint) para un código más limpio.
+https://validator.w3.org/
