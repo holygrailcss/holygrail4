@@ -74,11 +74,19 @@ function generarHtmlVariables(variables) {
   let variablesHtmlContent = '';
   Object.entries(variables).forEach(([key, data]) => {
     variablesHtmlContent += `
-    <div class="is-flex">
-      <p>${data.var_name} : </p>
-      <p>${Array.isArray(data.value) ? data.value.join(', ') : data.value}</p>
-    </div>
+    <h3>${data.var_name}</h3>
     `;
+    if (Array.isArray(data.value)) {
+      data.value.forEach(value => {
+        variablesHtmlContent += `
+        <div>${value}</div>
+        `;
+      });
+    } else {
+      variablesHtmlContent += `
+      <div>${data.value}</div>
+      `;
+    }
   });
   return variablesHtmlContent;
 }
